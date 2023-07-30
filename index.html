@@ -1,0 +1,80 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lembrou Web</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body onhashchange="hashchange()" onload="replaceurl(), loadNotes()">
+	<nav>
+		<p>Lembrou?</p>
+		<img src="./css/search.svg">
+	</nav>
+	<main id="mainElement">
+		<!--div class="card">
+			<div class="card-title"><h1>Sample</h1></div>
+			<div class="card-content">
+				Content Sample
+			</div>
+			<div class="card-footer"> <cite>Footer-Sample</cite> </div>
+		</div !-->
+			<aside id="new">
+				<div class="newNote">
+
+					<div class="newHeader">
+
+						<div class="newColor" id="colorBtn" onclick="show(selectColorDiv, ''), hide(colorBtn, '')"></div>
+						<div class="newColorInput" id="selectColorDiv">
+							<div class="colorInputs">
+
+								<input class="colorInput" id="colorInput" onchange="customColor(colorInput, colorSelect)" type="color" name="" value="#DCDCDC" title="Cor">
+								
+								<select onchange="refreshColor(colorSelect, colorInput)" class="" id="colorSelect">
+									<option value="#DCDCDC">Sem cor</option>
+									<option value="#1E90FF">Azul</option>
+									<option value="#32CD32">Verde</option>
+									<option value="#FFD700">Amarelo</option>
+									<option value="#FF4500">Vermelho</option>
+									<option value="#8A2BE2">Roxo</option/>
+									<option value="#282828">Preto</option>
+									<option style="display: none;"> Personalizado </option>
+								</select>
+							</div>
+								
+						</div>
+
+						<input class="newTitle" id="newTitle" type="text" name="" placeholder="Título" onclick="show(colorBtn, newTitle), hide(selectColorDiv, '')" autocomplete="off">
+
+					</div>
+
+					<textarea class="newText" id="newText" placeholder="Texto"></textarea>
+
+
+					<div class="newBtns">
+						<button class="newCancel" onclick="replaceurl()">Cancelar</button>
+						<button class="newSave" onclick="save(newTitle, newText, colorInput)">Salvar</button>
+					</div>
+					
+				</div>
+			</aside>
+
+		<div class="notes" id="notes">
+				
+			
+		</div>
+
+			<a class="newLink" href="#NovoLembrete">
+				<div class="new">
+					<p>
+					<b>+</b>
+					<b style="display: none">✓</b>
+					</p>
+				</div>
+			</a>
+
+
+	</main>
+</body>
+</html>
