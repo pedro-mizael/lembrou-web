@@ -40,7 +40,7 @@ function loadNotes() {
 	+ '</blockquote>'
 	+ '</div>'
 	+ '<div class="card-menu" id="cardMenu'+i+'">'
-	+ '<button onclick="del('+i+'), ">Excluir</button>'
+	+ '<button onclick="del('+i+') ">Excluir</button>'
 	+ '<button onclick="edit('+i+'), show(cardEdit'+i+', textTitle'+i+'), hide(cardMenu'+i+', bTitle'+i+')">Editar</button>'
 	+ '</div>'
 	+ '<div class="card-edit" id="cardEdit'+i+'" style="display: none">'
