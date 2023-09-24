@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lembrou Web</title>
-	<link rel="stylesheet" type="text/css" href="./css/style0815-2.css">
-	<script type="text/javascript" src="./js/script0815-2.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style0923.css">
+	<script type="text/javascript" src="./js/script0923.js"></script>
 </head>
 <body onhashchange="hashchange()" onload="replaceurl(), loadNotes('0')">
 	<nav>
@@ -21,49 +21,41 @@
 			<div class="card-footer"> <cite>Footer-Sample</cite> </div>
 		</div !-->
 			<aside id="new">
-				<div class="newNote">
+				<div class="newNote" id="newNoteDiv">
 
-					<div class="newHeader">
+					<div class="newHeader" >
 
-						<div class="newColor" id="colorBtn" onclick="show(selectColorDiv, ''), hide(colorBtn, '')"></div>
-						<div class="newColorInput" id="selectColorDiv">
-							<div class="colorInputs">
+						<button class="back" id="back" onclick="back()"><</button>
 
-								<input class="colorInput" id="colorInput" onchange="customColor(colorInput, colorSelect)" type="color" name="" value="#DCDCDC" title="Cor">
+						
+
+						<input class="newTitle" id="newTitle" type="text" name="" placeholder="Título"  autocomplete="off"  maxlength="18" style="text-transform: uppercase;">	
 								
-								<select onchange="refreshColor(colorSelect, colorInput)" class="" id="colorSelect">
-									<option value="#DCDCDC">Sem cor</option>
-									<option value="#1E90FF">Azul</option>
-									<option value="#32CD32">Verde</option>
-									<option value="#FFD700">Amarelo</option>
-									<option value="#FF4500">Vermelho</option>
-									<option value="#8A2BE2">Roxo</option/>
-									<option value="#282828">Preto</option>
-									<option style="display: none;"> Personalizado </option>
-								</select>
-							</div>
+								<input class="colorInput" id="colorInput" onchange="customColor(colorInput)" type="color" name="" value="#DCDCDC" title="Cor">
+					
 								
-						</div>
-
-						<input class="newTitle" id="newTitle" type="text" name="" placeholder="Título" onclick="show(colorBtn, newTitle), hide(selectColorDiv, '')" autocomplete="off">
+					
 
 					</div>
 
-					<textarea class="newText" id="newText" placeholder="Texto"></textarea>
+					<textarea class="newText" id="newText" placeholder="Lembrete"></textarea>
 
 
 					<div class="newBtns">
-						<button class="newCancel" onclick="replaceurl()">Cancelar</button>
-						<button class="newSave" onclick="save(newTitle, newText, colorInput)">Salvar</button>
+						<button class="newCancel" onclick="replaceurl()"><b>CANCELAR</b></button>
+						<button class="newSave" onclick="save(newTitle, newText, colorInput)"><b>SALVAR</b></button>
 					</div>
 					
 				</div>
 			</aside>
 
-		<div class="notes" id="notes">
+			<div class="notesContainer">
 				
-			
-		</div>
+				<div class="notes" id="notes">
+						
+					
+				</div>
+			</div>
 
 			<a class="newLink" href="#NovoLembrete">
 				<div class="new">
