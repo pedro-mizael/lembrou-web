@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lembrou Web</title>
-	<link rel="stylesheet" type="text/css" href="./css/style0923-2.css">
+	<link rel="stylesheet" type="text/css" href="./css/style0924.css">
 	<script type="text/javascript" src="./js/script0923.js"></script>
 </head>
 <body onhashchange="hashchange()" onload="replaceurl(), loadNotes('0')">
@@ -25,15 +25,11 @@
 
 					<div class="newHeader" >
 
-						<button class="back" id="back" onclick="back()"><</button>
-
-						
+						<input class="colorInput" id="colorInput" onchange="customColor(colorInput)" type="color" name="" value="#DCDCDC" title="Cor">		
 
 						<input class="newTitle" id="newTitle" type="text" name="" placeholder="Título"  autocomplete="off"  maxlength="18" style="text-transform: uppercase;">	
 								
-								<input class="colorInput" id="colorInput" onchange="customColor(colorInput)" type="color" name="" value="#DCDCDC" title="Cor">
-					
-								
+						<img src="./css/save.svg" class="save" id="save" onclick="save(newTitle, newText, colorInput)"> 
 					
 
 					</div>
