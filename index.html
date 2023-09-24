@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lembrou Web</title>
-	<link rel="stylesheet" type="text/css" href="./css/style0924.css">
-	<script type="text/javascript" src="./js/script0923.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style0924-2.css">
+	<script type="text/javascript" src="./js/script0924.js"></script>
 </head>
 <body onhashchange="hashchange()" onload="replaceurl(), loadNotes('0')">
 	<nav>
@@ -29,7 +29,7 @@
 
 						<input class="newTitle" id="newTitle" type="text" name="" placeholder="Título"  autocomplete="off"  maxlength="18" style="text-transform: uppercase;">	
 								
-						<img src="./css/save.svg" class="save" id="save" onclick="save(newTitle, newText, colorInput)"> 
+						<div class="save" id="save" onclick="save(newTitle, newText, colorInput)"><img src="./css/save.svg" id="save" > </div>
 					
 
 					</div>
@@ -39,7 +39,6 @@
 
 					<div class="newBtns">
 						<button class="newCancel" onclick="replaceurl()"><b>CANCELAR</b></button>
-						<button class="newSave" onclick="save(newTitle, newText, colorInput)"><b>SALVAR</b></button>
 					</div>
 					
 				</div>
