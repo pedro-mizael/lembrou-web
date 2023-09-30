@@ -5,13 +5,19 @@
 	<meta name="theme-color" content="#245E31">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lembrou Web</title>
-	<link rel="stylesheet" type="text/css" href="./css/style0924-2.css">
-	<script type="text/javascript" src="./js/script0924-2.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style0930.css">
+	<script type="text/javascript" src="./js/script0930.js"></script>
 </head>
 <body onhashchange="hashchange()" onload="replaceurl(), loadNotes('0')">
 	<nav>
-		<p>Lembrou?</p>
-		<img src="./css/search.svg">
+		<div class="searchDiv">
+		<p id="lembrouHeader">Lembrou?</p>
+			<input type="text" style="display: none" name="" class="searchInput" id="searchInput" placeholder="Procurar..." autocomplete="off" oninput="loadNotes('0')">
+			<button style="display: none" class="clearSearch" id="clearSearch" onclick="searchInput.value = '';refreshUrl()">
+				X
+			</button>
+		</div>
+		<img src="./css/search.svg" onclick="changeVisible(searchInput), changeVisible(lembrouHeader), search(searchInput), changeVisible(clearSearch)">
 	</nav>
 	<main id="mainElement">
 		<!--div class="card">
